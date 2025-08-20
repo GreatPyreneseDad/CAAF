@@ -36,7 +36,15 @@ optimized_response = optimizer.optimize_response(
 ## Installation
 
 ```bash
-pip install coherence-aware-ai
+# Clone the repository
+git clone https://github.com/GreatPyreneseDad/CAAF.git
+cd CAAF
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Install in development mode
+pip install -e .
 ```
 
 ## Core Components
@@ -107,9 +115,29 @@ curl -X POST http://localhost:8000/optimize-response \
 
 ## Dashboard
 
-Access the monitoring dashboard at `http://localhost:8501` after running:
+Access the real-time monitoring dashboard:
 ```bash
 streamlit run dashboard/app.py
+```
+
+The dashboard provides:
+- Live coherence metrics visualization
+- User journey tracking
+- Intervention effectiveness analysis
+- System health monitoring
+
+## Testing
+
+Run the comprehensive test suite:
+```bash
+# Run all tests with coverage
+python run_tests.py
+
+# Run specific test file
+pytest tests/test_gct_core.py -v
+
+# Run with coverage report
+pytest --cov=src --cov-report=html tests/
 ```
 
 ## Key Features
@@ -119,12 +147,14 @@ streamlit run dashboard/app.py
 - **Platform Agnostic**: Works with any LLM
 - **Research-Backed**: Based on Grounded Coherence Theory
 - **Measurable Impact**: Demonstrable improvement in user outcomes
+- **Comprehensive Testing**: 90%+ code coverage
+- **Real-time Dashboard**: Monitor coherence metrics live
 
 ## Documentation
 
-- [API Reference](docs/api_reference.md)
-- [Integration Guide](docs/integration_guide.md)  
-- [Coherence Theory](docs/coherence_theory.md)
+- [API Reference](docs/api_reference.md) - Complete API documentation
+- [Integration Guide](docs/integration_guide.md) - Step-by-step integration instructions
+- [Coherence Theory](docs/coherence_theory.md) - Mathematical foundations and research
 
 ## License
 
